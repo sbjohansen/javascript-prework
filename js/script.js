@@ -13,6 +13,8 @@ function getMoveName(argMoveId){
 }
 
 function displayResult(argComputerMove, argPlayerMove){
+
+    
     
     
     printMessage('Computer played ' + '<strong>' + argComputerMove + '</strong>' + ', player played ' + '<strong>' + argPlayerMove + '</strong>.');
@@ -38,12 +40,12 @@ let randomNumber = Math.floor(Math.random() * 3 + 1);
 
 console.log('Random number equals: ' + randomNumber);
 
-let argComputerMove = getMoveName(randomNumber);
+let computerMove = getMoveName(randomNumber);
 
 let playerInput = prompt('Choose your move! 1: rock, 2: paper, 3: scissor.');
 
 console.log('Player played: ' + playerInput);
 
-let argPlayerMove = getMoveName(playerInput);
+let playerMove = getMoveName(playerInput);
 
-displayResult(argComputerMove, argPlayerMove);
+displayResult(computerMove, playerMove);
