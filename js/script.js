@@ -26,8 +26,24 @@ if(playerInput == '1'){
   playerMove = 'rock';
 } else if(playerInput == '2'){
     playerMove = 'paper';
-} else(playerInput == '3'){
+} else if(playerInput == '3'){
     playerMove = 'scissor';
 }
 
 printMessage('Your move is: ' + playerMove);
+
+if( computerMove == 'rock' && playerMove == 'paper'){
+    printMessage('You won!');
+  } else if( computerMove == 'paper' && playerMove == 'scissor'){
+      printMessage('You won!');
+  } else if( computerMove == 'scissor' && playerMove == 'rock'){
+      printMessage('You won!');    
+  } else if( playerMove == 'unknown move') {
+      printMessage('Something went wrong, try again');
+  } else if(computerMove && playerMove == 'rock'){
+      printMessage('Tie');
+  } else if( computerMove && playerMove == 'paper'){
+      printMessage('Tie');
+  } else if( computerMove && playerMove == 'scissor'){
+      printMessage('Tie');
+  } else( printMessage('Computer won!'))
