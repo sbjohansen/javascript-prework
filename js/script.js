@@ -14,4 +14,4 @@ else (randomNumber == 3){
 }
 
 
-printMessage('Mój ruch to: ' + computerMove);
+printMessage('My move is: ' + computerMove);
