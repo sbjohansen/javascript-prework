@@ -1,37 +1,36 @@
-function getMoveName(argMoveId){
-    if(argMoveId == 1){
-      return 'rock';
+function getMoveName(argMoveId) {
+    if (argMoveId == 1) {
+        return 'rock';
     }
-    else if(argMoveId == 2){
+    else if (argMoveId == 2) {
         return 'paper';
     }
-    else if(argMoveId == 3){
+    else if (argMoveId == 3) {
         return 'scissor';
-    } else { printMessage('I cant recognize move with id ' + argMoveId + '.');
-    return 'unknown move';
-    }  
+    } else {
+        printMessage('I cant recognize move with id ' + argMoveId + '.');
+        return 'unknown move';
+    }
 }
 
-function displayResult(argComputerMove, argPlayerMove){
+function displayResult(argComputerMove, argPlayerMove) {
 
-    
-    
-    
     printMessage('Computer played ' + '<strong>' + argComputerMove + '</strong>' + ', player played ' + '<strong>' + argPlayerMove + '</strong>.');
-    
-    if( argComputerMove == 'rock' && argPlayerMove == 'paper'){
+
+    if (argComputerMove == 'rock' && argPlayerMove == 'paper') {
         printMessage('Player won!');
-    } else if( argComputerMove == 'paper' && argPlayerMove == 'scissor'){
-          printMessage('Player won!');
-    } else if( argComputerMove == 'scissor' && argPlayerMove == 'rock'){
-          printMessage('Player won!');    
-    } else if( argComputerMove == argPlayerMove) {
-          printMessage('Tie');
-    } else if( argComputerMove == 'unknown move') {
-            printMessage('Stop cheating!');
-    } else if( argPlayerMove == 'unknown move') {
-            printMessage('Someone is trying to cheat!');
-    } else { printMessage('Computer Won');
+    } else if (argComputerMove == 'paper' && argPlayerMove == 'scissor') {
+        printMessage('Player won!');
+    } else if (argComputerMove == 'scissor' && argPlayerMove == 'rock') {
+        printMessage('Player won!');
+    } else if (argComputerMove == argPlayerMove) {
+        printMessage('Tie');
+    } else if (argComputerMove == 'unknown move') {
+        printMessage('Stop cheating!');
+    } else if (argPlayerMove == 'unknown move') {
+        printMessage('Someone is trying to cheat!');
+    } else {
+        printMessage('Computer Won');
     }
 }
 
