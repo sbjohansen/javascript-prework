@@ -1,3 +1,5 @@
+/*FUNCTIONS*/
+
 function getMoveName(argMoveId) {
     if (argMoveId == 1) {
         return 'rock';
@@ -34,6 +36,9 @@ function displayResult(argComputerMove, argPlayerMove) {
     }
 }
 
+/*END of FUNCTIONS*/
+
+/*VARIABLES*/
 
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 
@@ -47,4 +52,10 @@ console.log('Player played: ' + playerInput);
 
 let playerMove = getMoveName(playerInput);
 
+/*ENF of VARIABLES*/
+
+/*FUNCTION CALL*/
+
 displayResult(computerMove, playerMove);
+
+/*END of FUNCTION CALL*/
