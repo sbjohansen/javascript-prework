@@ -15,3 +15,19 @@ else (randomNumber == 3){
 
 
 printMessage('My move is: ' + computerMove);
+
+let playerInput = prompt('Choose your move! 1: rock, 2: paper, 3: scissor.');
+
+console.log('Player played: ' + playerInput);
+
+let playerMove = 'unknown move';
+
+if(playerInput == '1'){
+  playerMove = 'rock';
+} else if(playerInput == '2'){
+    playerMove = 'paper';
+} else(playerInput == '3'){
+    playerMove = 'scissor';
+}
+
+printMessage('Your move is: ' + playerMove);
