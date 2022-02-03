@@ -1,5 +1,7 @@
-function playGame() {
+function playGame(playerInput) {
 	
+	clearMessages ();
+
 	function getMoveName(argMoveId) {
     	if (argMoveId == 1) {
         	return 'rock';
@@ -46,7 +48,7 @@ function playGame() {
 
 	let computerMove = getMoveName(randomNumber);
 
-	let playerInput = prompt('Choose your move! 1: rock, 2: paper, 3: scissor.');
+	//let playerInput = prompt('Choose your move! 1: rock, 2: paper, 3: scissor.');
 
 	console.log('Player played: ' + playerInput);
 
@@ -73,3 +75,4 @@ function printMessage(msg){
 function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
 }
+
