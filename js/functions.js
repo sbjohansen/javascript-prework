@@ -1,25 +1,25 @@
 function playGame(playerInput) {
-	
-	clearMessages ();
+
+	clearMessages();
 
 	function getMoveName(argMoveId) {
-    	if (argMoveId == 1) {
-        	return 'rock';
-   		}	
-    	else if (argMoveId == 2) {
-        	return 'paper';
-    	}
-    	else if (argMoveId == 3) {
-        	return 'scissor';
-    	} else {
-        	printMessage('I cant recognize move with id ' + argMoveId + '.');
-        	return 'unknown move';
-    	}
+		if (argMoveId == 1) {
+			return 'rock';
+		}
+		else if (argMoveId == 2) {
+			return 'paper';
+		}
+		else if (argMoveId == 3) {
+			return 'scissor';
+		} else {
+			printMessage('I cant recognize move with id ' + argMoveId + '.');
+			return 'unknown move';
+		}
 	}
 
 	function displayResult(argComputerMove, argPlayerMove) {
 
-    	printMessage('Computer played ' + '<strong>' + argComputerMove + '</strong>' + ', player played ' + '<strong>' + argPlayerMove + '</strong>.');
+		printMessage('Computer played ' + '<strong>' + argComputerMove + '</strong>' + ', player played ' + '<strong>' + argPlayerMove + '</strong>.');
 
 		if (argComputerMove == 'rock' && argPlayerMove == 'paper') {
 			printMessage('Player won!');
@@ -38,7 +38,7 @@ function playGame(playerInput) {
 		}
 	}
 
-	
+
 
 	/*VARIABLES*/
 
@@ -66,13 +66,13 @@ function playGame(playerInput) {
 
 
 
-function printMessage(msg){
+function printMessage(msg) {
 	let div = document.createElement('div');
 	div.innerHTML = msg;
 	document.getElementById('messages').appendChild(div);
 }
 
-function clearMessages(){
+function clearMessages() {
 	document.getElementById('messages').innerHTML = '';
 }
 
