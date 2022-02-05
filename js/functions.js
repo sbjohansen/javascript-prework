@@ -1,11 +1,4 @@
-
-//Scoreboard - start
-
-let playerScore = 0;
-let computerScore = 0;
-
-
-//GAME LOGIC
+/*GAME LOGIC*/
 
 function playGame(playerInput) {
 
@@ -26,7 +19,7 @@ function playGame(playerInput) {
 		}
 	}
 
-//RESULTS - text | Adding score
+/*RESULTS - text | Adding score*/
 
 	function displayResult(argComputerMove, argPlayerMove) {
 
@@ -54,13 +47,25 @@ function playGame(playerInput) {
 
 	}
 
-//Update score in HTML
+/*SCORE UPDATE*/
 
 	function updateScore() {
 		document.getElementById("p-score").textContent = playerScore;
 		document.getElementById("c-score").textContent = computerScore;
-	}
+		if (playerScore === 5) {
+			printMessage('Player won whole game!!!');
+			document.getElementById("play-rock").disabled = true;
+			document.getElementById("play-paper").disabled = true;
+			document.getElementById("play-scissor").disabled = true;
+		} else if (computerScore === 5) {
+			printMessage('Computer won whole game!!!');
+			document.getElementById("play-rock").disabled = true;
+			document.getElementById("play-paper").disabled = true;
+			document.getElementById("play-scissor").disabled = true;
 
+		} 
+		
+	}
 
 
 	/*VARIABLES*/
@@ -83,14 +88,15 @@ function playGame(playerInput) {
 
 	displayResult(computerMove, playerMove);
 	updateScore();
-	/*END of FUNCTION CALL*/
-
 	
+	/*END of FUNCTION CALL*/
 }
 
 
+//Scoreboard - start
 
-
+let playerScore = 0;
+let computerScore = 0;
 
 function printMessage(msg) {
 	let div = document.createElement('div');
