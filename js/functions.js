@@ -1,3 +1,12 @@
+
+//Scoreboard - start
+
+let playerScore = 0;
+let computerScore = 0;
+
+
+//GAME LOGIC
+
 function playGame(playerInput) {
 
 	clearMessages();
@@ -17,16 +26,21 @@ function playGame(playerInput) {
 		}
 	}
 
+//RESULTS - text | Adding score
+
 	function displayResult(argComputerMove, argPlayerMove) {
 
 		printMessage('Computer played ' + '<strong>' + argComputerMove + '</strong>' + ', player played ' + '<strong>' + argPlayerMove + '</strong>.');
 
 		if (argComputerMove == 'rock' && argPlayerMove == 'paper') {
 			printMessage('Player won!');
+			playerScore++;
 		} else if (argComputerMove == 'paper' && argPlayerMove == 'scissor') {
 			printMessage('Player won!');
+			playerScore++;
 		} else if (argComputerMove == 'scissor' && argPlayerMove == 'rock') {
 			printMessage('Player won!');
+			playerScore++;
 		} else if (argComputerMove == argPlayerMove) {
 			printMessage('Tie');
 		} else if (argComputerMove == 'unknown move') {
@@ -35,7 +49,16 @@ function playGame(playerInput) {
 			printMessage('Someone is trying to cheat!');
 		} else {
 			printMessage('Computer Won');
+			computerScore++;
 		}
+
+	}
+
+//Update score in HTML
+
+	function updateScore() {
+		document.getElementById("p-score").textContent = playerScore;
+		document.getElementById("c-score").textContent = computerScore;
 	}
 
 
@@ -54,14 +77,17 @@ function playGame(playerInput) {
 
 	let playerMove = getMoveName(playerInput);
 
-	/*ENF of VARIABLES*/
+	/*END of VARIABLES*/
 
 	/*FUNCTION CALL*/
 
 	displayResult(computerMove, playerMove);
-
+	updateScore();
 	/*END of FUNCTION CALL*/
+
+	
 }
+
 
 
 
