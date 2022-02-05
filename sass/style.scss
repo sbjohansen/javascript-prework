@@ -1,9 +1,73 @@
+/*Variables*/
+$background-color: #3498db;
+$window-color: #e67e22;
+
+/*global*/
+
 body {
     margin: 0;
     padding: 0;
+    background: $background-color;
 }
 
 .container {
     width: 1140px;
     margin: 0 auto;
+}
+
+/*game-window*/
+
+.game-window {
+    background: $window-color;
+    width: 800px;
+    height: 600px;
+    margin: 100px auto;
+    border: white solid 5px;
+    border-radius: 15px;
+    justify-items: center;
+    
+}
+
+.game-messages {
+    justify-content: center;
+    margin: 100px auto 0 auto;
+
+}
+
+.btn {
+    width: 90px;
+    height: 50px;
+    border: white solid 5px;
+    border-radius: 15px;
+    background: none;
+    color: white;
+}
+
+
+.game-buttons {
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+#messages {
+    text-align: center;
+    max-width: 500px;
+    max-height: 150px;
+    min-height: 150px;
+    min-width: 500px;
+}
+
+.restart-button {
+    margin-top: 50px;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+#results {
+    text-align: center;
+    margin: 50px auto;
 }

@@ -23,25 +23,25 @@ function playGame(playerInput) {
 
 	function displayResult(argComputerMove, argPlayerMove) {
 
-		printMessage('Computer played ' + '<strong>' + argComputerMove + '</strong>' + ', player played ' + '<strong>' + argPlayerMove + '</strong>.');
+		printMessage('Computer played ' + '<strong>' + argComputerMove + '</strong>' + ', player played ' + '<strong>' + argPlayerMove + '</strong>.<br><br>');
 
 		if (argComputerMove == 'rock' && argPlayerMove == 'paper') {
-			printMessage('Player won!');
+			printMessage('Player won!<br><br>');
 			playerScore++;
 		} else if (argComputerMove == 'paper' && argPlayerMove == 'scissor') {
-			printMessage('Player won!');
+			printMessage('Player won!<br><br>');
 			playerScore++;
 		} else if (argComputerMove == 'scissor' && argPlayerMove == 'rock') {
-			printMessage('Player won!');
+			printMessage('Player won!<br><br>');
 			playerScore++;
 		} else if (argComputerMove == argPlayerMove) {
-			printMessage('Tie');
+			printMessage('Tie<br><br>');
 		} else if (argComputerMove == 'unknown move') {
-			printMessage('Stop cheating!');
-		} else if (argPlayerMove == 'unknown move') {
-			printMessage('Someone is trying to cheat!');
+			printMessage('Stop cheating!<br><br>');
+		} else if (argPlayerMove == 'unknown move<br><br>') {
+			printMessage('Someone is trying to cheat!<br><br>');
 		} else {
-			printMessage('Computer Won');
+			printMessage('Computer Won<br><br>');
 			computerScore++;
 		}
 
