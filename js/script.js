@@ -9,3 +9,7 @@ document.getElementById('play-paper').addEventListener('click', function () {
 document.getElementById('play-scissor').addEventListener('click', function () {
     playGame(3)
 });
+
+document.getElementById('restart').addEventListener('click', function () {
+    restartGame();
+});

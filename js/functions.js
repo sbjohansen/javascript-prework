@@ -57,6 +57,7 @@ function playGame(playerInput) {
 			document.getElementById("play-rock").disabled = true;
 			document.getElementById("play-paper").disabled = true;
 			document.getElementById("play-scissor").disabled = true;
+			
 		} else if (computerScore === 5) {
 			printMessage('Computer won whole game!!!');
 			document.getElementById("play-rock").disabled = true;
@@ -108,3 +109,6 @@ function clearMessages() {
 	document.getElementById('messages').innerHTML = '';
 }
 
+function restartGame() {
+location.reload();
+}
