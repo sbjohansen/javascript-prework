@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Rock, paper, scissor</title>
 	<link rel="stylesheet" href="vendor/bootstrap-grid.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+	<header>
+		<div class="container">
+			<h1> ROCK, PAPER, SCISSORS</h1>
+		</div>
+	</header>
 	<div class="container">
 		<div class="game-window">
 			<div class="row">
@@ -21,35 +28,36 @@
 					</div>
 					<div class="row">
 						<div id="results" class="col-12">
-							Player <span id="p-score">0</span> - <span id="c-score">0</span> Computer
+							<br><br><br>Player <span id="p-score">0</span> - <span id="c-score">0</span> Computer
 						</div>
 					</div>
-				</div>								
+				</div>
 				<div class="col-2 images-r">
 					<img src="/images/rock-r.png" id="rock-r">
 					<img src="/images/paper-r.png" id="paper-r">
 					<img src="/images/scissor-r.png" id="scissor-r">
 				</div>
-		</div>
+			</div>
 			<div class="row">
 				<div id="buttons" class="game-buttons col-12">
-					<button id="play-rock" class="btn">Rock</button>
-					<button id="play-paper" class="btn">Paper</button>
-					<button id="play-scissor" class="btn">Scissors</button>
+					<button id="play-rock" class="btn">ROCK</button>
+					<button id="play-paper" class="btn">PAPER</button>
+					<button id="play-scissor" class="btn">SCISSORS</button>
 				</div>
 			</div>
 			<div class="row">
-			<div class="next-round restart-button col-12">
-				<button id="next-round" class="btn">next round</button>
+				<div class="next-round restart-button col-12">
+					<button id="next-round" class="btn">NEXT ROUND</button>
+				</div>
 			</div>
-		</div>
 			<div class="restart-button">
 				<button id="restart" class="btn">RESTART</button>
 			</div>
-			
+
 		</div>
 	</div>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
 </body>
+
 </html>

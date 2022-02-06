@@ -28,7 +28,7 @@ function playGame(playerInput) {
 
 		if (argComputerMove == 'rock' && argPlayerMove == 'paper') {
 
-			printMessage('Player won!<br><br>');
+			printMessage('<br><br>Player won!<br><br>');
 			playerScore++;
 			document.getElementById("play-rock").disabled = true;
 			document.getElementById("play-paper").disabled = true;
@@ -36,34 +36,34 @@ function playGame(playerInput) {
 			document.getElementById("rock-r").src = '/images/rock-r.png';
 
 		} else if (argComputerMove == 'paper' && argPlayerMove == 'scissor') {
-			printMessage('Player won!<br><br>');
+			printMessage('<br><br>Player won!<br><br>');
 			playerScore++;
 			document.getElementById("play-rock").disabled = true;
 			document.getElementById("play-paper").disabled = true;
 			document.getElementById("play-scissor").disabled = true;
 		} else if (argComputerMove == 'scissor' && argPlayerMove == 'rock') {
-			printMessage('Player won!<br><br>');
+			printMessage('<br><br>Player won!<br><br>');
 			playerScore++;
 			document.getElementById("play-rock").disabled = true;
 			document.getElementById("play-paper").disabled = true;
 			document.getElementById("play-scissor").disabled = true;
 		} else if (argComputerMove == argPlayerMove) {
-			printMessage('Tie<br><br>');
+			printMessage('<br><br>Tie<br><br>');
 			document.getElementById("play-rock").disabled = true;
 			document.getElementById("play-paper").disabled = true;
 			document.getElementById("play-scissor").disabled = true;
 		} else if (argComputerMove == 'unknown move') {
-			printMessage('Stop cheating!<br><br>');
+			printMessage('<br><br>Stop cheating!<br><br>');
 			document.getElementById("play-rock").disabled = true;
 			document.getElementById("play-paper").disabled = true;
 			document.getElementById("play-scissor").disabled = true;
 		} else if (argPlayerMove == 'unknown move<br><br>') {
-			printMessage('Someone is trying to cheat!<br><br>');
+			printMessage('<br><br>Someone is trying to cheat!<br><br>');
 			document.getElementById("play-rock").disabled = true;
 			document.getElementById("play-paper").disabled = true;
 			document.getElementById("play-scissor").disabled = true;
 		} else {
-			printMessage('Computer Won<br><br>');
+			printMessage('<br><br>Computer Won<br><br>');
 			computerScore++;
 			document.getElementById("play-rock").disabled = true;
 			document.getElementById("play-paper").disabled = true;
