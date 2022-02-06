@@ -42,7 +42,7 @@ function playGame(playerInput) {
 			document.getElementById("play-paper").disabled = true;
 			document.getElementById("play-scissor").disabled = true;
 		} else if (argComputerMove == 'scissor' && argPlayerMove == 'rock') {
-			printMessage('<br><br>Player won!<br><br>');
+			printMessage('<br><br>Player won!<br><br><br><br>');
 			playerScore++;
 			document.getElementById("play-rock").disabled = true;
 			document.getElementById("play-paper").disabled = true;
