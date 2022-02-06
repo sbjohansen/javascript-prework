@@ -28,21 +28,42 @@ function playGame(playerInput) {
 		if (argComputerMove == 'rock' && argPlayerMove == 'paper') {
 			printMessage('Player won!<br><br>');
 			playerScore++;
+			document.getElementById("play-rock").disabled = true;
+			document.getElementById("play-paper").disabled = true;
+			document.getElementById("play-scissor").disabled = true;
 		} else if (argComputerMove == 'paper' && argPlayerMove == 'scissor') {
 			printMessage('Player won!<br><br>');
 			playerScore++;
+			document.getElementById("play-rock").disabled = true;
+			document.getElementById("play-paper").disabled = true;
+			document.getElementById("play-scissor").disabled = true;
 		} else if (argComputerMove == 'scissor' && argPlayerMove == 'rock') {
 			printMessage('Player won!<br><br>');
 			playerScore++;
+			document.getElementById("play-rock").disabled = true;
+			document.getElementById("play-paper").disabled = true;
+			document.getElementById("play-scissor").disabled = true;
 		} else if (argComputerMove == argPlayerMove) {
 			printMessage('Tie<br><br>');
+			document.getElementById("play-rock").disabled = true;
+			document.getElementById("play-paper").disabled = true;
+			document.getElementById("play-scissor").disabled = true;
 		} else if (argComputerMove == 'unknown move') {
 			printMessage('Stop cheating!<br><br>');
+			document.getElementById("play-rock").disabled = true;
+			document.getElementById("play-paper").disabled = true;
+			document.getElementById("play-scissor").disabled = true;
 		} else if (argPlayerMove == 'unknown move<br><br>') {
 			printMessage('Someone is trying to cheat!<br><br>');
+			document.getElementById("play-rock").disabled = true;
+			document.getElementById("play-paper").disabled = true;
+			document.getElementById("play-scissor").disabled = true;
 		} else {
 			printMessage('Computer Won<br><br>');
 			computerScore++;
+			document.getElementById("play-rock").disabled = true;
+			document.getElementById("play-paper").disabled = true;
+			document.getElementById("play-scissor").disabled = true;
 		}
 
 	}
@@ -57,12 +78,16 @@ function playGame(playerInput) {
 			document.getElementById("play-rock").disabled = true;
 			document.getElementById("play-paper").disabled = true;
 			document.getElementById("play-scissor").disabled = true;
+			document.getElementById("next-round").disabled = true;
+
 			
 		} else if (computerScore === 5) {
 			printMessage('Computer won whole game!!!');
 			document.getElementById("play-rock").disabled = true;
 			document.getElementById("play-paper").disabled = true;
 			document.getElementById("play-scissor").disabled = true;
+			document.getElementById("next-round").disabled = true;
+
 
 		} 
 		
@@ -111,4 +136,37 @@ function clearMessages() {
 
 function restartGame() {
 location.reload();
+}
+
+
+/*images test*/
+
+function rockL() {
+	document.getElementById("rock-l").src = '/images/rock-r.png';
+}
+
+function nextRound() {
+	if (playerScore < 5) {
+	
+	document.getElementById("rock-l").src = '/images/rock-l.png';
+	document.getElementById("rock-r").src = '/images/rock-r.png';
+	document.getElementById("paper-l").src = '/images/paper-l.png';
+	document.getElementById("paper-r").src = '/images/paper-r.png';
+	document.getElementById("scissor-l").src = '/images/scissor-l.png';
+	document.getElementById("scissor-r").src = '/images/scissor-r.png';	
+	document.getElementById("play-rock").disabled = false;
+	document.getElementById("play-paper").disabled = false;
+	document.getElementById("play-scissor").disabled = false;
+} else if (computerScore < 5) {
+	
+	document.getElementById("rock-l").src = '/images/rock-l.png';
+	document.getElementById("rock-r").src = '/images/rock-r.png';
+	document.getElementById("paper-l").src = '/images/paper-l.png';
+	document.getElementById("paper-r").src = '/images/paper-r.png';
+	document.getElementById("scissor-l").src = '/images/scissor-l.png';
+	document.getElementById("scissor-r").src = '/images/scissor-r.png';	
+	document.getElementById("play-rock").disabled = false;
+	document.getElementById("play-paper").disabled = false;
+	document.getElementById("play-scissor").disabled = false;
+}
 }

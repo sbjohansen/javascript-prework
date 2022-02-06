@@ -10,13 +10,27 @@
 	<div class="container">
 		<div class="game-window">
 			<div class="row">
-				<div id="messages" class="game-messages col-12">
-
+				<div class="col-2 images-l">
+					<img src="/images/rock-l.png" id="rock-l">
+					<img src="/images/paper-l.png" id="paper-l">
+					<img src="/images/scissor-l.png" id="scissor-l">
 				</div>
-			</div>
-			<div id="results">
-				Player <span id="p-score">0</span> - <span id="c-score">0</span> Computer
-			</div>
+				<div class="col-8">
+					<div id="messages" class="game-message">
+
+					</div>
+					<div class="row">
+						<div id="results" class="col-12">
+							Player <span id="p-score">0</span> - <span id="c-score">0</span> Computer
+						</div>
+					</div>
+				</div>								
+				<div class="col-2 images-r">
+					<img src="/images/rock-r.png" id="rock-r">
+					<img src="/images/paper-r.png" id="paper-r">
+					<img src="/images/scissor-r.png" id="scissor-r">
+				</div>
+		</div>
 			<div class="row">
 				<div id="buttons" class="game-buttons col-12">
 					<button id="play-rock" class="btn">Rock</button>
@@ -24,10 +38,15 @@
 					<button id="play-scissor" class="btn">Scissors</button>
 				</div>
 			</div>
-			
+			<div class="row">
+			<div class="next-round restart-button col-12">
+				<button id="next-round" class="btn">next round</button>
+			</div>
+		</div>
 			<div class="restart-button">
 				<button id="restart" class="btn">RESTART</button>
 			</div>
+			
 		</div>
 	</div>
 	<script src="js/functions.js"></script>

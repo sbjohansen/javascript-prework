@@ -35,7 +35,6 @@ body {
 
 .game-messages {
     justify-content: center;
-    margin: 100px auto 0 auto;
 
 }
 
@@ -59,18 +58,29 @@ body {
 
 #messages {
     text-align: center;
-    width: 500px;
-   height: 150px;
+    height: 150px;
+    padding-top: 50px;
 }
 
 .restart-button {
-    margin-top: 50px;
+    margin-top: 25px;
     text-align: center;
     justify-content: center;
     
 }
 
 #results {
+    justify-content: center;
     text-align: center;
-    margin: 50px auto;
+    padding-top: 50px;
+}
+
+.images-l {
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.images-r {
+    padding-top: 50px;
+    padding-right: 100px;
 }
