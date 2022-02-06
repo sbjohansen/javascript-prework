@@ -21,9 +21,9 @@ body {
 }
 
 header {
-    margin: 50px auto;
+    margin: 0 auto;
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 /*game-window*/
@@ -31,8 +31,8 @@ header {
 .game-window {
     background: $window-color;
     width: 900px;
-    height: 600px;
-    margin: 100px auto;
+    height: 650px;
+    margin: 25px auto;
     border: white solid 5px;
     border-radius: 15px;
     justify-items: center;
