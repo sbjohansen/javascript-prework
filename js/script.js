@@ -5,10 +5,12 @@ document.getElementById('play-rock').addEventListener('click', function () {
 
 document.getElementById('play-paper').addEventListener('click', function () {
     playGame(2);
+    paperL()
 });
 
 document.getElementById('play-scissor').addEventListener('click', function () {
     playGame(3);
+    scissorL()
 });
 
 document.getElementById('restart').addEventListener('click', function () {

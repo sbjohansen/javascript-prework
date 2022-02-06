@@ -7,6 +7,7 @@ function playGame(playerInput) {
 	function getMoveName(argMoveId) {
 		if (argMoveId == 1) {
 			return 'rock';
+
 		}
 		else if (argMoveId == 2) {
 			return 'paper';
@@ -19,18 +20,21 @@ function playGame(playerInput) {
 		}
 	}
 
-/*RESULTS - text | Adding score*/
+	/*RESULTS - text | Adding score*/
 
 	function displayResult(argComputerMove, argPlayerMove) {
 
 		printMessage('Computer played ' + '<strong>' + argComputerMove + '</strong>' + ', player played ' + '<strong>' + argPlayerMove + '</strong>.<br><br>');
 
 		if (argComputerMove == 'rock' && argPlayerMove == 'paper') {
+
 			printMessage('Player won!<br><br>');
 			playerScore++;
 			document.getElementById("play-rock").disabled = true;
 			document.getElementById("play-paper").disabled = true;
 			document.getElementById("play-scissor").disabled = true;
+			document.getElementById("rock-r").src = '/images/rock-r.png';
+
 		} else if (argComputerMove == 'paper' && argPlayerMove == 'scissor') {
 			printMessage('Player won!<br><br>');
 			playerScore++;
@@ -68,7 +72,9 @@ function playGame(playerInput) {
 
 	}
 
-/*SCORE UPDATE*/
+
+
+	/*SCORE UPDATE*/
 
 	function updateScore() {
 		document.getElementById("p-score").textContent = playerScore;
@@ -80,7 +86,7 @@ function playGame(playerInput) {
 			document.getElementById("play-scissor").disabled = true;
 			document.getElementById("next-round").disabled = true;
 
-			
+
 		} else if (computerScore === 5) {
 			printMessage('Computer won whole game!!!');
 			document.getElementById("play-rock").disabled = true;
@@ -89,8 +95,22 @@ function playGame(playerInput) {
 			document.getElementById("next-round").disabled = true;
 
 
-		} 
-		
+		}
+
+	}
+
+	/*COMPUTER PICK COLOR*/
+
+	function computerMoveColor(argComputerColor) {
+		if (argComputerColor == 'rock') {
+			document.getElementById("rock-r").src = '/images/rock-r-c.png';
+		} else if (argComputerColor == 'paper') {
+			document.getElementById("paper-r").src = '/images/paper-r-c.png';
+
+		} else if (argComputerColor == 'scissor') {
+			document.getElementById("scissor-r").src = '/images/scissor-r-c.png';
+
+		}
 	}
 
 
@@ -101,6 +121,7 @@ function playGame(playerInput) {
 	console.log('Random number equals: ' + randomNumber);
 
 	let computerMove = getMoveName(randomNumber);
+
 
 	//let playerInput = prompt('Choose your move! 1: rock, 2: paper, 3: scissor.');
 
@@ -114,7 +135,7 @@ function playGame(playerInput) {
 
 	displayResult(computerMove, playerMove);
 	updateScore();
-	
+	computerMoveColor(computerMove);
 	/*END of FUNCTION CALL*/
 }
 
@@ -135,38 +156,55 @@ function clearMessages() {
 }
 
 function restartGame() {
-location.reload();
+	location.reload();
 }
 
 
-/*images test*/
+/*IMAGES*/
 
 function rockL() {
-	document.getElementById("rock-l").src = '/images/rock-r.png';
+	document.getElementById("rock-l").src = '/images/rock-l-c.png';
 }
+
+function paperL() {
+	document.getElementById("paper-l").src = '/images/paper-l-c.png';
+}
+
+function scissorL() {
+	document.getElementById("scissor-l").src = '/images/scissor-l-c.png';
+}
+
+
+/*NEXT ROUND reset*/
+
 
 function nextRound() {
 	if (playerScore < 5) {
-	
-	document.getElementById("rock-l").src = '/images/rock-l.png';
-	document.getElementById("rock-r").src = '/images/rock-r.png';
-	document.getElementById("paper-l").src = '/images/paper-l.png';
-	document.getElementById("paper-r").src = '/images/paper-r.png';
-	document.getElementById("scissor-l").src = '/images/scissor-l.png';
-	document.getElementById("scissor-r").src = '/images/scissor-r.png';	
-	document.getElementById("play-rock").disabled = false;
-	document.getElementById("play-paper").disabled = false;
-	document.getElementById("play-scissor").disabled = false;
-} else if (computerScore < 5) {
-	
-	document.getElementById("rock-l").src = '/images/rock-l.png';
-	document.getElementById("rock-r").src = '/images/rock-r.png';
-	document.getElementById("paper-l").src = '/images/paper-l.png';
-	document.getElementById("paper-r").src = '/images/paper-r.png';
-	document.getElementById("scissor-l").src = '/images/scissor-l.png';
-	document.getElementById("scissor-r").src = '/images/scissor-r.png';	
-	document.getElementById("play-rock").disabled = false;
-	document.getElementById("play-paper").disabled = false;
-	document.getElementById("play-scissor").disabled = false;
+
+		document.getElementById("rock-l").src = '/images/rock-l.png';
+		document.getElementById("rock-r").src = '/images/rock-r.png';
+		document.getElementById("paper-l").src = '/images/paper-l.png';
+		document.getElementById("paper-r").src = '/images/paper-r.png';
+		document.getElementById("scissor-l").src = '/images/scissor-l.png';
+		document.getElementById("scissor-r").src = '/images/scissor-r.png';
+		document.getElementById("play-rock").disabled = false;
+		document.getElementById("play-paper").disabled = false;
+		document.getElementById("play-scissor").disabled = false;
+	} else if (computerScore < 5) {
+
+		document.getElementById("rock-l").src = '/images/rock-l.png';
+		document.getElementById("rock-r").src = '/images/rock-r.png';
+		document.getElementById("paper-l").src = '/images/paper-l.png';
+		document.getElementById("paper-r").src = '/images/paper-r.png';
+		document.getElementById("scissor-l").src = '/images/scissor-l.png';
+		document.getElementById("scissor-r").src = '/images/scissor-r.png';
+		document.getElementById("play-rock").disabled = false;
+		document.getElementById("play-paper").disabled = false;
+		document.getElementById("play-scissor").disabled = false;
+	}
 }
-}
+
+
+
+
+
