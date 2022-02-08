@@ -154,7 +154,7 @@ const clearMessages = function() {
 	document.getElementById('messages').innerHTML = '';
 }
 
-function restartGame() {
+const restartGame = function() {
 	location.reload();
 }
 
