@@ -1,13 +1,12 @@
 /*GAME LOGIC*/
 
-function playGame(playerInput) {
+const playGame = function(playerInput) {
 
 	clearMessages();
 
-	function getMoveName(argMoveId) {
+	const getMoveName = function(argMoveId) {
 		if (argMoveId == 1) {
 			return 'rock';
-
 		}
 		else if (argMoveId == 2) {
 			return 'paper';
@@ -22,7 +21,7 @@ function playGame(playerInput) {
 
 	/*RESULTS - text | Adding score*/
 
-	function displayResult(argComputerMove, argPlayerMove) {
+	const displayResult = function(argComputerMove, argPlayerMove) {
 
 		printMessage('Computer played ' + '<strong>' + argComputerMove + '</strong>' + ', player played ' + '<strong>' + argPlayerMove + '</strong>.<br><br>');
 
@@ -76,7 +75,7 @@ function playGame(playerInput) {
 
 	/*SCORE UPDATE*/
 
-	function updateScore() {
+	const updateScore = function() {
 		document.getElementById("p-score").textContent = playerScore;
 		document.getElementById("c-score").textContent = computerScore;
 		if (playerScore === 5) {
@@ -101,7 +100,7 @@ function playGame(playerInput) {
 
 	/*COMPUTER PICK COLOR*/
 
-	function computerMoveColor(argComputerColor) {
+	const computerMoveColor = function(argComputerColor) {
 		if (argComputerColor == 'rock') {
 			document.getElementById("rock-r").src = '/images/rock-r-c.png';
 		} else if (argComputerColor == 'paper') {
@@ -116,18 +115,18 @@ function playGame(playerInput) {
 
 	/*VARIABLES*/
 
-	let randomNumber = Math.floor(Math.random() * 3 + 1);
+	const randomNumber = Math.floor(Math.random() * 3 + 1);
 
 	console.log('Random number equals: ' + randomNumber);
 
-	let computerMove = getMoveName(randomNumber);
+	const computerMove = getMoveName(randomNumber);
 
 
 	//let playerInput = prompt('Choose your move! 1: rock, 2: paper, 3: scissor.');
 
 	console.log('Player played: ' + playerInput);
 
-	let playerMove = getMoveName(playerInput);
+	const playerMove = getMoveName(playerInput);
 
 	/*END of VARIABLES*/
 
@@ -145,13 +144,13 @@ function playGame(playerInput) {
 let playerScore = 0;
 let computerScore = 0;
 
-function printMessage(msg) {
+const printMessage = function(msg) {
 	let div = document.createElement('div');
 	div.innerHTML = msg;
 	document.getElementById('messages').appendChild(div);
 }
 
-function clearMessages() {
+const clearMessages = function() {
 	document.getElementById('messages').innerHTML = '';
 }
 
@@ -162,15 +161,15 @@ function restartGame() {
 
 /*IMAGES*/
 
-function rockL() {
+const rockL = function() {
 	document.getElementById("rock-l").src = '/images/rock-l-c.png';
 }
 
-function paperL() {
+const paperL = function() {
 	document.getElementById("paper-l").src = '/images/paper-l-c.png';
 }
 
-function scissorL() {
+const scissorL = function() {
 	document.getElementById("scissor-l").src = '/images/scissor-l-c.png';
 }
 
@@ -178,7 +177,7 @@ function scissorL() {
 /*NEXT ROUND reset*/
 
 
-function nextRound() {
+const nextRound = function() {
 	if (playerScore < 5) {
 
 		document.getElementById("rock-l").src = '/images/rock-l.png';
